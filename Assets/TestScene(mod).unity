@@ -241,8 +241,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbFrameQueue: 17
-  lastFrame: {fileID: 483826793}
+  lastFrame: {fileID: 241539628}
   lastFrameTemp: {fileID: 0}
+--- !u!84 &241539628
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 575
+  m_Height: 268
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 48
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &270584081
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,41 +358,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270584081}
   m_CullTransparentMesh: 0
---- !u!84 &483826793
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 575
-  m_Height: 268
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 48
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &489415057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: e9c6b25fb2654a34e9e4a741d5a24c79,
@@ -405,30 +405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActiveCamoMaterial: {fileID: 2100000, guid: ecf9e92ba788e32448ea3ecaa8eb3f6f, type: 2}
   ActiveCamoRamp: 1
---- !u!1 &891249989 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: e9c6b25fb2654a34e9e4a741d5a24c79,
-    type: 3}
-  m_PrefabInstance: {fileID: 1316852724}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &891249990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891249989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3ed96cb24cc3a4a8a57256b3f5d988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeCamoRenderers:
-  - {fileID: 1316852726}
-  - {fileID: 1720331872}
-  - {fileID: 889373006}
-  - {fileID: 1250272995}
-  ActiveCamoRamp: 0
 --- !u!1 &926189347
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652951349}
   - component: {fileID: 1652951348}
+  - component: {fileID: 1652951350}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -912,7 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3432b7133ed5c4e86783683741f8ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationVelocity: {x: 0, y: 80, z: 0}
+  rotationVelocity: {x: 0, y: 0, z: 0}
 --- !u!4 &1652951349
 Transform:
   m_ObjectHideFlags: 0
@@ -928,6 +905,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1652951350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652951347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3ed96cb24cc3a4a8a57256b3f5d988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeCamoRenderers:
+  - {fileID: 1316852726}
+  - {fileID: 1720331872}
+  - {fileID: 889373006}
+  - {fileID: 1250272995}
+  ActiveCamoRamp: 0
 --- !u!1 &1696741095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: e9c6b25fb2654a34e9e4a741d5a24c79,
